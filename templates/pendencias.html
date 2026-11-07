@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Consulta de mensalidades pendentes</h2><table><tr><th>Aluno</th><th>Competência</th><th>Valor</th></tr>{% for m in registros %}<tr><td>{{ m.nome }}</td><td>{{ m.competencia }}</td><td>R$ {{ '%.2f'|format(m.valor) }}</td></tr>{% else %}<tr><td colspan="3">Nenhuma pendência.</td></tr>{% endfor %}</table>{% endblock %}
